@@ -35,9 +35,9 @@ plsm <- function(data, strucmod, measuremod, order=c("generic", "alphabetical"),
     measuremod <- as.matrix(read.csv(measuremod))
   }
   
-  if(ncol(strucmod)!=2 || mode(strucmod)!="character" || class(strucmod)!="matrix")
+  if(ncol(strucmod)!=2 || mode(strucmod)!="character")
     stop("The argument 'strucmod' must be a two column character matrix.")
-  if(ncol(measuremod)!=2 || mode(measuremod)!="character" || class(measuremod)!="matrix")
+  if(ncol(measuremod)!=2 || mode(measuremod)!="character")
     stop("The argument 'measuremod' must be a two column character matrix.")
     
   latent <- unique(as.vector(strucmod))
